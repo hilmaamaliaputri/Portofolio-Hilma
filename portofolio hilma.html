@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Hilma Amalia Putri</title>
+    <link rel="stylesheet" href="portofolio hilma.css">
+    <script src="script.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">HAP Studio</div>
+        <div class="hamburger">
+            <img src="hamburger-menu.png" alt="Menu">
+        </div>     
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#keahlian">Keahlian</a></li>
+            <li><a href="#testimoni">Testimoni</a></li>
+            <li><a href="#portofolio">Portofolio</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section id="beranda" class="hero">
+        <div class="hero-text">
+            <h2>UI/UX Designer & Web Developer</h2>
+            <h1>Hello, saya Hilma Amalia Putri</h1>
+            <p>"Welcome to My Digital World! Di sini, ide menjadi kode, imajinasi menjadi desain, dan visi Anda menjadi website yang hidup."</p>
+            <div class="hero-buttons">
+                <a href="#kontak" class="btn btn-primary">Hubungi</a> 
+                <a href="#tentang" class="btn btn-secondary">Lihat CV</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="profile.png" alt="Hilma Amalia Putri">
+        </div>
+    </section>
+    <div class="stats">
+        <div>
+            <span>4+</span>
+            <p>Pengalaman</p>
+        </div>
+        <div>
+            <span>65+</span>
+            <p>Proyek Selesai</p>
+        </div>
+        <div>
+            <span>70+</span>
+            <p>Klien Puas</p>
+        </div>
+    </div>
+
+ <section id="tentang" class="about">
+    <div class="about-container">
+        <div class="about-image">
+            <div class="circle-bg"></div>
+            <img src="profile2.jpg" alt="Hilma Amalia Putri">
+        </div>
+        <div class="about-text">
+            <h2><span class="highlight">Tentang</span> Saya</h2>
+            <p>Hai! Saya <strong>Hilma Amalia Putri</strong>, lulusan Sarjana Informatika yang mengubah passion di bidang teknologi menjadi solusi digital yang impactful. Sejak kecil, saya terpesona dengan dunia digital dan terus mengeksplorasi cara kerjanya. Selama kuliah, saya aktif menggarap proyek freelance dan berkolaborasi dengan tim kreatif, mengasah kemampuan teknis sekaligus memahami kebutuhan unik klien dari berbagai bidang.</p>
+            <a href="#" class="btn-primary">Selengkapnya</a>
+        </div>
+    </div>
+</section>
+
+<section id="keahlian" class="skills">
+    <h2>
+        <span class="highlight">Keahlian</span> Saya
+    </h2>
+    <div class="underline"></div>
+    <div class="skills-container">
+        
+        <!-- Figma -->
+        <div class="skill">
+            <img src="figma-logo.png" alt="Figma" width="80px">
+            <h3>Figma</h3>
+            <p>Merancang antarmuka pengguna (UI/UX) yang intuitif dan estetis</p>
+        </div>
+
+        <!-- React.js -->
+        <div class="skill">
+            <img src="react-logo.png" alt="React.js" width="80px">
+            <h3>React.js</h3>
+            <p>Membangun website responsif dan sesuai dengan keinginan</p>
+        </div>
+
+        <!-- Laravel -->
+        <div class="skill">
+            <img src="laravel-logo.png" alt="Laravel" width="80px">
+            <h3>Laravel</h3>
+            <p>Membangun website responsif dan sesuai dengan keinginan</p>
+        </div>
+    </div>
+</section>
+
+<section class="skill-section">
+    <div class="chart-container">
+        <canvas id="skillChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script>
+        Chart.register(ChartDataLabels);
+        const ctx = document.getElementById('skillChart').getContext('2d');
+        const skillChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Web Development', 'UI/UX Design', 'Konsultasi Teknologi', 'Business Analyst'],
+                datasets: [{
+                    data: [30, 30, 30, 10],
+                    backgroundColor: ['#ff1d58', '#00ff87', '#00aaff', '#2c2c3c'],
+                    hoverOffset: 5,
+                    borderColor: '#ffffff',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            color: '#000',
+                            font: {
+                                size: 24
+                            },
+                            usePointStyle: true, // Gunakan ikon sebagai legend
+                            pointStyle: 'circle', // Ubah ikon menjadi lingkaran
+                            boxWidth: 15, // Ubah ukuran lingkaran di legend
+                            boxHeight: 15, // (Opsional) Biar proporsional dengan boxWidth
+                            padding: 10
+                        }
+                    },
+                    datalabels: {
+                        color: '#fff',
+                        font: {
+                            size: 18,
+                        },
+                        formatter: (value) => value + '%'
+                    }
+                },
+                cutout: 0,
+                animation: {
+                    animateScale: false,
+                    animateRotate: true
+                }
+            }
+        });
+    </script>
+</section>
+
+<section id="mengapa" class="why-me">
+    <h2>Mengapa <span class="highlight">Memilih</span> Saya?</h2>
+    <div class="underline"></div>
+
+    <div class="why-container">
+        <div class="why-item">
+            <img src="Komunikatif.jpg" alt="Komunikatif">
+            <h3>Komunikatif</h3>
+            <p>Kesuksesan proyek dimulai dari komunikasi yang jelas.</p>
+        </div>
+
+        <div class="why-item">
+            <img src="Keamanan.jpg" alt="Keamanan Data">
+            <h3>Keamanan Data</h3>
+            <p>Mulai dari secure coding, hingga proteksi dari serangan malware dll.</p>
+        </div>
+
+        <div class="why-item">
+            <img src="Detail.jpg" alt="Detail-Oriented">
+            <h3>Detail-Oriented</h3>
+            <p>Dari typography hingga kecepatan loading, setiap elemen diperhatikan.</p>
+        </div>
+    </div>
+</section>
+
+<section id="testimoni" class="testimonials">
+    <div class="container">
+        <h2>Apa Yang Mereka Katakan <span class="highlight">Tentang Saya?</span></h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-box active">
+                <img src="siska.png" alt="Siska Pratiwi Putri">
+                <div class="testimonial-content">
+                    <h3>Siska Pratiwi Putri</h3>
+                    <p class="position">Product Manager</p>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        Hilma bisa mengubah konsep abstrak kami menjadi website yang fungsional.
+                        Desain yang menarik dan hasil sesuai deadline. Dari briefing sampai launching, komunikasinya jelas.
+                    </p>
+                    <p class="date">Feb 8, 2025</p>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <img src="putra.png" alt="Putra Susanto">
+                <div class="testimonial-content">
+                    <h3>Joko Susanto</h3>
+                    <p class="position">CEO Startup</p>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        Sangat profesional! Hilma membantu membangun branding bisnis kami dengan website yang modern.
+                        Sangat direkomendasikan menggunakan jasa Hilma dalam meningkatkan bisnis kita.
+                    </p>
+                    <p class="date">Jan 15, 2025</p>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <img src="nadia.png" alt="Nadia Omara">
+                <div class="testimonial-content">
+                    <h3>Nadia Rahma</h3>
+                    <p class="position">Wiraswasta</p>
+                    <div class="stars">★★★★</div>
+                    <p class="testimonial-text">
+                        Desain website yang luar biasa, sangat sesuai dengan keinginan saya. Pengerjaan cepat dan rapi!
+                        Harga yang sangat sesuai dengan hasilnya! Hilma dapat memecahkan hal itu.
+                    </p>
+                    <p class="date">Dec 20, 2024</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <button class="prev">&#10094;</button>
+            <div class="dots"></div>
+            <button class="next">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div id="portofolio" class="portfolio">
+        <h2 class="portfolio-title">Portofolio</h2>
+        <div class="portfolio-container">
+            
+            <div class="portfolio-item">
+                <div class="portfolio-text">
+                    <h3 class="portfolio-heading">SehaTera</h3>
+                    <p>Pembuatan aplikasi kesehatan yang memiliki fitur lengkap dan mudah digunakan, diharapkan akan membantu masyarakat di perkotaan hingga pedesaan.</p>
+                    <button class="portfolio-button">→</butto n>
+                </div>
+                <div class="portfolio-logo-container">
+                    <img src="Logo-SehaTera.png" alt="SehaTera">
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-logo-container">
+                    <img src="Logo-Ngulisik.png" alt="Ngulisik">
+                </div>
+                <div class="portfolio-text">
+                    <h3 class="portfolio-heading">Ngulisik</h3>
+                    <p>Perancangan aplikasi berbasis website untuk kemudahan pemesanan trip Ngulisik di Kota Tasikmalaya.</p>
+                    <button class="portfolio-button">→</button>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-text">
+                    <h3 class="portfolio-heading">Kenzi Attire</h3>
+                    <p>Website yang meningkatkan visibilitas dan penjualan Kenzi Attire di segmen fashion muslim.</p>
+                    <button class="portfolio-button">→</button>
+                </div>
+                <div class="portfolio-logo-container">
+                    <img src="Logo-Kenzi.png" alt="Kenzi Attire">
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-logo-container">
+                    <img src="Logo-DetComplex.png" alt="DetComplex">
+                </div>
+                <div class="portfolio-text">
+                    <h3 class="portfolio-heading">DetComplex</h3>
+                    <p>Perancangan aplikasi kalkulator yang dapat memudahkan pengguna dalam menghitung deret dan bilangan kompleks.</p>
+                    <button class="portfolio-button">→</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="kontak">
+    <footer class="footer" id="kontak">
+        <div class="footer-header">
+            <h2><span>Mari</span> Bekerja Sama</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="footer-container">
+            <!-- Bagian Kiri -->
+            <div class="footer-section">
+                <h3>TAUTAN LANGSUNG</h3>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#keahlian">Keahlian</a></li>
+                    <li><a href="#testimoni">Testimoni</a></li>
+                    <li><a href="#portofolio">Portofolio</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+            
+            <div class="garis-tengah"></div>
+
+            <div class="footer-section">
+                <h3>TAUTAN KEBIJAKAN</h3>
+                <ul>
+                    <li><a href="#">Syarat dan Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Kebijakan Keamanan</a></li>
+                    <li><a href="#">Kebijakan Penggunaan Cookie</a></li>
+                    <li><a href="#">Kebijakan Penggunaan Layanan</a></li>
+                </ul>
+            </div>
+
+            <div class="garis-tengah"></div>
+
+            <!-- Kontak -->
+            <div class="footer-section">
+                <h3>KONTAK SAYA</h3>
+                <p>📧 hilmaamaliap@company.com</p>
+                <p>📞 0853426272523</p>
+                <p>📍  Saranjana, Kota Tasikmalaya</p>
+            </div>
+
+            <div class="garis-tengah"></div>
+
+            <!-- Formulir Kontak -->
+            <div class="contact-form">
+                <h3>HUBUNGI KAMI</h3>
+                <form>
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                    
+                    <label for="pesan">Pesan</label>
+                    <textarea id="pesan" name="pesan"></textarea>
+                    
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Ikon Sosial Media -->
+        <div class="footer-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-google"></i>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>Copyright © 2025 HAP Studio. Hak Cipta Dilindungi</p>
+        </div>
+        <div class="footer-wave">
+            <img src="wave.png" alt="Hilma Amalia Putri">
+        </div>
+    </footer>
+</section>
