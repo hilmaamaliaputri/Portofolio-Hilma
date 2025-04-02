@@ -847,7 +847,7 @@ h2 {
 .why-item img {
     width: 100px;
     margin-bottom: 10px;
-    border-radius: 20px; /* Sudut melengkung */
+    border-radius: 20px;
 }
 
 h3 {
@@ -864,23 +864,23 @@ p {
 
 @media screen and (max-width: 1024px) {
     .why-container {
-        gap: 20px; /* Mengurangi jarak antar item */
+        gap: 20px; 
     }
 
     .why-item {
-        width: 250px; /* Lebar item sedikit lebih kecil di tablet */
+        width: 250px; 
     }
 
     h2 {
-        font-size: 35px; /* Menurunkan ukuran judul untuk tablet */
+        font-size: 35px; 
     }
 
     h3 {
-        font-size: 22px; /* Menurunkan ukuran sub-judul di tablet */
+        font-size: 22px; 
     }
 
     p {
-        font-size: 14px; /* Menurunkan ukuran teks di tablet */
+        font-size: 14px; 
     }
 }
 
@@ -889,34 +889,34 @@ p {
     body {
         padding: 0;
         margin: 0;
-        overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
+        overflow-x: hidden; 
     }
 
     .why-container {
-        gap: 15px; /* Mengurangi gap antar item */
-        flex-direction: column; /* Menyusun item secara vertikal */
-        margin: 20px; /* Menambahkan margin untuk konten */
-        width: 100%; /* Pastikan kontainer memenuhi lebar layar */
-        box-sizing: border-box; /* Menghitung padding dan margin dalam lebar */
+        gap: 15px; 
+        flex-direction: column; 
+        margin: 20px; 
+        width: 100%; 
+        box-sizing: border-box; 
     }
 
     .why-item {
-        width: 100%; /* Membuat item memenuhi lebar kontainer */
-        padding: 30px; /* Mengurangi padding agar konten lebih rapat */
-        box-sizing: border-box; /* Pastikan padding dihitung dalam ukuran */
-        margin-bottom: 20px; /* Jarak antar item lebih rapat */
+        width: 100%; 
+        padding: 30px; 
+        box-sizing: border-box; 
+        margin-bottom: 20px; 
     }
 
     h2 {
-        font-size: 30px; /* Menurunkan ukuran judul di perangkat kecil */
+        font-size: 30px; 
     }
 
     h3 {
-        font-size: 20px; /* Menurunkan ukuran sub-judul di perangkat kecil */
+        font-size: 20px; 
     }
 
     p {
-        font-size: 14px; /* Menurunkan ukuran teks di perangkat kecil */
+        font-size: 14px;
     }
 }
 
@@ -1114,17 +1114,17 @@ h2 {
 /* Responsif untuk Mobile */
 @media screen and (max-width: 767px) {
     .testimonials {
-        padding: 40px 15px; /* Mengurangi padding agar konten tidak terlalu rapat di layar kecil */
+        padding: 40px 15px; 
     }
 
     .testimonial-box {
-        padding: 30px; /* Mengurangi padding untuk menghemat ruang */
+        padding: 30px; 
     }
 
     .testimonial-box img {
-        width: 150px; /* Menyesuaikan ukuran gambar untuk layar kecil */
+        width: 150px; 
         height: 150px;
-        margin-right: 10px; /* Mengurangi jarak antara gambar dan teks */
+        margin-right: 10px; 
     }
 
     h2 {
@@ -1158,19 +1158,19 @@ h2 {
     }
 
     .slider-controls {
-        margin-top: 15px; /* Menurunkan margin atas pada kontrol slider */
+        margin-top: 15px; 
     }
 
     .prev, .next {
-        font-size: 18px; /* Menyesuaikan ukuran font untuk kontrol */
+        font-size: 18px;
     }
 
     .dots {
-        gap: 5px; /* Mengurangi jarak antara dot navigasi */
+        gap: 5px; 
     }
 
     .dot {
-        width: 8px; /* Mengurangi ukuran dot pada tampilan mobile */
+        width: 8px; 
         height: 8px;
     }
 }
@@ -1287,15 +1287,15 @@ body {
 /* Responsive: Tablet */
 @media screen and (max-width: 1024px) {
     .portfolio {
-        padding: 40px 15px; /* Adjust padding for tablet */
+        padding: 40px 15px; 
     }
 
     .portfolio-title {
-        font-size: 40px; /* Adjust font size for tablet */
+        font-size: 40px; 
     }
 
     .portfolio-container {
-        gap: 50px; /* Reduce gap between items */
+        gap: 50px; 
         align-items: center;
     }
 
@@ -1305,13 +1305,13 @@ body {
     }
 
     .portfolio-item img {
-        width: 200px; /* Adjust image size for tablet */
+        width: 200px;
         height: auto;
-        margin-right: 15px; /* Reduce space between image and text */
+        margin-right: 15px; 
     }
 
     .portfolio-text {
-        font-size: 18px; /* Adjust text size for tablet */
+        font-size: 18px; 
     }
 
     .portfolio-button {
@@ -1319,22 +1319,22 @@ body {
     }
 
     .portfolio-logo-container img {
-        width: 250px; /* Adjust logo size for tablet */
+        width: 250px; 
     }
 }
 
 /* Responsive: Mobile */
 @media screen and (max-width: 767px) {
     .portfolio {
-        padding: 30px 10px; /* Adjust padding for mobile */
+        padding: 30px 10px; 
     }
 
     .portfolio-title {
-        font-size: 24px; /* Adjust font size for mobile */
+        font-size: 24px; 
     }
 
     .portfolio-container {
-        gap: 30px; /* Reduce gap between items */
+        gap: 30px; 
         align-items: center;
     }
 
@@ -1344,13 +1344,13 @@ body {
     }
 
     .portfolio-item img {
-        width: 200px; /* Adjust image size for mobile */
+        width: 200px; 
         height: auto;
-        margin-right: 10px; /* Reduce space between image and text */
+        margin-right: 10px; 
     }
 
     .portfolio-text p{
-        font-size: 10px; /* Adjust text size for mobile */
+        font-size: 10px; 
     }
 
     .portfolio-button {
@@ -1358,7 +1358,7 @@ body {
     }
 
     .portfolio-logo-container img {
-        width: 150px; /* Adjust logo size for mobile */
+        width: 150px; 
         height: 150px;
     }
 }
@@ -1561,28 +1561,27 @@ body {
     }
 
     .garis-tengah {
-        display: none; /* Sembunyikan garis tengah di tablet */
+        display: none; 
     }
 
     .footer-header h2 {
-        font-size: 28px; /* Ukuran teks lebih kecil */
+        font-size: 28px; 
     }
 
     .footer-header h2 span {
-        font-size: 28px; /* Ukuran teks lebih kecil */
+        font-size: 28px; 
     }
 
     .footer-section h3 {
-        font-size: 14px; /* Ukuran font lebih kecil */
+        font-size: 14px; 
     }
 
     .footer-section ul li {
-        font-size: 14px; /* Ukuran font lebih kecil */
+        font-size: 14px; 
     }
 
     .footer-bottom {
-        font-size: 14px; /* Ukuran font lebih kecil */
-    }
+        font-size: 14px; 
 
     .contact-form {
         max-width: 90%;
@@ -1594,8 +1593,7 @@ body {
     }
 
     .footer-icons i {
-        font-size: 20px; /* Ukuran ikon lebih kecil */
-    }
+        font-size: 20px; 
 
     .footer-wave {
         position: absolute;
@@ -1604,7 +1602,7 @@ body {
         transform: translateX(-50%);
         width: 100%;
         height: auto;
-        z-index: 10;  /* Tambahkan z-index untuk memastikan berada di atas konten lainnya */
+        z-index: 10;  
     }    
 }
 
@@ -1623,23 +1621,23 @@ body {
     }
 
     .footer-header h2 {
-        font-size: 24px; /* Ukuran teks lebih kecil */
+        font-size: 24px; 
     }
 
     .footer-header h2 span {
-        font-size: 24px; /* Ukuran teks lebih kecil */
+        font-size: 24px; 
     }
 
     .footer-section h3 {
-        font-size: 14px; /* Ukuran font lebih kecil */
+        font-size: 14px; 
     }
 
     .footer-section ul li {
-        font-size: 14px; /* Ukuran font lebih kecil */
+        font-size: 14px; 
     }
 
     .footer-bottom {
-        font-size: 14px; /* Ukuran font lebih kecil */
+        font-size: 14px; 
     }
 
     .contact-form {
@@ -1648,7 +1646,7 @@ body {
     }
 
     .footer-icons i {
-        font-size: 18px; /* Ukuran ikon lebih kecil */
+        font-size: 18px; 
         margin: 0 8px;
     }
 
@@ -1659,6 +1657,6 @@ body {
         transform: translateX(-50%);
         width: 100%;
         height: auto;
-        z-index: 10;  /* Tambahkan z-index untuk memastikan berada di atas konten lainnya */
+        z-index: 10;  
     }    
 }
