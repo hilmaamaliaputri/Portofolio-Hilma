@@ -247,7 +247,7 @@
                     <button class="portfolio-button">→</butto n>
                 </div>
                 <div class="portfolio-logo-container">
-                    <img src="Logo-Sehatera.png" alt="SehaTera">
+                    <img src="Logo-SehaTera.png" alt="SehaTera">
                 </div>
             </div>
 
@@ -296,7 +296,7 @@
         </div>
 
         <div class="footer-container">
-            <!-- Bagian Kiri -->
+
             <div class="footer-section">
                 <h3>TAUTAN LANGSUNG</h3>
                 <ul>
@@ -324,7 +324,6 @@
 
             <div class="garis-tengah"></div>
 
-            <!-- Kontak -->
             <div class="footer-section">
                 <h3>KONTAK SAYA</h3>
                 <p>📧 hilmaamaliap@company.com</p>
@@ -334,25 +333,28 @@
 
             <div class="garis-tengah"></div>
 
-            <!-- Formulir Kontak -->
+
             <div class="contact-form">
                 <h3>HUBUNGI KAMI</h3>
                 <form>
                     <label for="nama">Nama</label>
                     <input type="text" id="nama" name="nama">
-                    
+            
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email">
-                    
+            
+                    <label for="hp">Nomor Handphone</label>
+                    <input type="text" id="hp" name="hp">
+            
                     <label for="pesan">Pesan</label>
                     <textarea id="pesan" name="pesan"></textarea>
-                    
+            
                     <button type="submit">Kirim</button>
                 </form>
-            </div>
+            </div>            
         </div>
 
-        <!-- Ikon Sosial Media -->
+
         <div class="footer-icons">
             <i class="fab fa-facebook"></i>
             <i class="fab fa-instagram"></i>
@@ -360,7 +362,6 @@
             <i class="fab fa-google"></i>
         </div>
 
-        <!-- Copyright -->
         <div class="footer-bottom">
             <p>Copyright © 2025 HAP Studio. Hak Cipta Dilindungi</p>
         </div>
@@ -369,3 +370,60 @@
         </div>
     </footer>
 </section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('form').on('submit', function (e) {
+        e.preventDefault();
+
+        var nama = $('#nama').val().trim();
+        var email = $('#email').val().trim();
+        var hp = $('#hp').val().trim();
+        var pesan = $('#pesan').val().trim();
+
+        // Validasi wajib
+        if (!nama || !email || !hp || !pesan) {
+            alert('Semua kolom wajib diisi!');
+            return;
+        }
+
+        // Validasi panjang maksimal
+        if (nama.length > 50) {
+            alert('Nama maksimal 50 karakter!');
+            return;
+        }
+        if (email.length > 50) {
+            alert('Email maksimal 50 karakter!');
+            return;
+        }
+        if (hp.length > 15) {
+            alert('Nomor handphone maksimal 15 digit!');
+            return;
+        }
+        if (pesan.length > 200) {
+            alert('Pesan maksimal 200 karakter!');
+            return;
+        }
+
+        // Validasi format email
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert('Format email tidak valid!');
+            return;
+        }
+
+        // Validasi nomor HP hanya angka
+        var hpPattern = /^[0-9]+$/;
+        if (!hpPattern.test(hp)) {
+            alert('Nomor handphone hanya boleh angka!');
+            return;
+        }
+
+        alert('Form berhasil dikirim!');
+        this.reset();
+    });
+});
+</script>
+</body>
+</html>
