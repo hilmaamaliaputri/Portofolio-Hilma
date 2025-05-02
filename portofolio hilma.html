@@ -336,22 +336,22 @@
 
             <div class="contact-form">
                 <h3>HUBUNGI KAMI</h3>
-                <form>
+                <form action="simpan.php" method="POST">
                     <label for="nama">Nama</label>
-                    <input type="text" id="nama" name="nama">
-            
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+        
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-            
+                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+        
                     <label for="hp">Nomor Handphone</label>
-                    <input type="text" id="hp" name="hp">
-            
+                    <input type="text" id="hp" name="hp" placeholder="Masukkan nomor handphone" required>
+        
                     <label for="pesan">Pesan</label>
-                    <textarea id="pesan" name="pesan"></textarea>
-            
+                    <textarea id="pesan" name="pesan" placeholder="Tulis pesan Anda di sini" required></textarea>
+        
                     <button type="submit">Kirim</button>
                 </form>
-            </div>            
+            </div>           
         </div>
 
 
@@ -362,68 +362,70 @@
             <i class="fab fa-google"></i>
         </div>
 
-        <div class="footer-bottom">
-            <p>Copyright © 2025 HAP Studio. Hak Cipta Dilindungi</p>
-        </div>
-        <div class="footer-wave">
-            <img src="wave.png" alt="Hilma Amalia Putri">
-        </div>
+        <footer>          
+            <p>© 2025 Hilmoy Portofolio</p>
+            
+            <div class="footer-wave">
+                <img src="wave.png" alt="Hilma Amalia Putri">
+            </div>
+            
     </footer>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-$(document).ready(function () {
-    $('form').on('submit', function (e) {
-        e.preventDefault();
-
-        var nama = $('#nama').val().trim();
-        var email = $('#email').val().trim();
-        var hp = $('#hp').val().trim();
-        var pesan = $('#pesan').val().trim();
-
-        // Validasi wajib
-        if (!nama || !email || !hp || !pesan) {
-            alert('Semua kolom wajib diisi!');
-            return;
-        }
-
-        // Validasi panjang maksimal
-        if (nama.length > 50) {
-            alert('Nama maksimal 50 karakter!');
-            return;
-        }
-        if (email.length > 50) {
-            alert('Email maksimal 50 karakter!');
-            return;
-        }
-        if (hp.length > 15) {
-            alert('Nomor handphone maksimal 15 digit!');
-            return;
-        }
-        if (pesan.length > 200) {
-            alert('Pesan maksimal 200 karakter!');
-            return;
-        }
-
-        // Validasi format email
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-            alert('Format email tidak valid!');
-            return;
-        }
-
-        // Validasi nomor HP hanya angka
-        var hpPattern = /^[0-9]+$/;
-        if (!hpPattern.test(hp)) {
-            alert('Nomor handphone hanya boleh angka!');
-            return;
-        }
-
-        alert('Form berhasil dikirim!');
-        this.reset();
+    $(document).ready(function () {
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+    
+            var nama = $('#nama').val().trim();
+            var email = $('#email').val().trim();
+            var hp = $('#hp').val().trim();
+            var pesan = $('#pesan').val().trim();
+    
+            // Validasi wajib
+            if (!nama || !email || !hp || !pesan) {
+                alert('Semua kolom wajib diisi!');
+                return;
+            }
+    
+            // Validasi panjang maksimal
+            if (nama.length > 50) {
+                alert('Nama maksimal 50 karakter!');
+                return;
+            }
+            if (email.length > 50) {
+                alert('Email maksimal 50 karakter!');
+                return;
+            }
+            if (hp.length > 15) {
+                alert('Nomor handphone maksimal 15 digit!');
+                return;
+            }
+            if (pesan.length > 200) {
+                alert('Pesan maksimal 200 karakter!');
+                return;
+            }
+    
+            // Validasi format email
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Format email tidak valid!');
+                return;
+            }
+    
+            // Validasi nomor HP hanya angka
+            var hpPattern = /^[0-9]+$/;
+            if (!hpPattern.test(hp)) {
+                alert('Nomor handphone hanya boleh angka!');
+                return;
+            }
+    
+            // Jika semua validasi lulus, submit form secara manual
+            this.submit();
+        });
     });
-});
 </script>
+    
 </body>
 </html>
